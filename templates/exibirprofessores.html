@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalhes {{detalhes[0][0]}}</title>
+</head>
+<body>
+    <h1>Detalhes professor</h1>
+    <h2>Nome: {{detalhes[0][0]}}</h2>
+    <h2>Data de Nascimento: {{detalhes[0][1]}}</h2>
+    <h2>Nome da Mãe: {{detalhes[0][2]}}</h2>
+    <h2>Titulação: {{detalhes[0][3]}}</h2>
+
+    <h2><a href="/calcularsalarioprofessor/{{detalhes[0][6]}}"> Salário</a></h2>
+
+
+    <table border="1">
+        <tr>
+            <td>Disciplina</td>
+            <td>Curso</td>
+            <td>Carga Horária</td>
+        </tr>
+        {% for detalhe in detalhes %}
+            <tr>
+                <td>{{detalhe[4]}}</td>
+                <td>{{detalhe[5]}}</td>
+                <td>{{detalhe[6]}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>

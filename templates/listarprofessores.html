@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Professores</title>
+</head>
+<body>
+<h3>Pesquisa Avançada</h3>
+<form action="/consultarportitulacao" method="post">
+    Insira a titulação: <input type="text" name="titulo"><br>
+    <input type="submit" value="Pesquisar">
+</form>
+
+<h1>Professores</h1>
+    {% for professores in professor %}
+        <ul>
+            <li><a href="/exibirprofessor/{{professores[1]}}">{{professores[0]}}</a> </li>
+        </ul>
+    {% endfor %}
+</body>
+</html>
